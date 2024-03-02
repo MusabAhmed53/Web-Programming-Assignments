@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <script src="Q3JS.js"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mb-4">Job Application Form</h1>
+
+    <!-- Job Application Form -->
+    <form id="jobApplicationForm">
+        <!-- 1.1 Personal Information -->
+        <fieldset>
+            <legend>1.1 Personal Information</legend>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="emailAddress">Email Address</label>
+                    <input type="email" class="form-control" id="emailAddress" name="emailAddress" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="street">Street</label>
+                    <input type="text" class="form-control" id="street" name="street" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" name="city" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="state">State</label>
+                    <input type="text" class="form-control" id="state" name="state" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="zipCode">ZIP Code</label>
+                    <input type="text" class="form-control" id="zipCode" name="zipCode">
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- 1.2 Resume and Cover Letter -->
+        <fieldset>
+            <legend>1.2 Resume and Cover Letter</legend>
+            <div class="form-group">
+                <label for="resume">Upload Resume</label>
+                <input type="file" class="form-control-file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+            </div>
+            <div class="form-group">
+                <label for="coverLetter">Cover Letter</label>
+                <textarea class="form-control" id="coverLetter" name="coverLetter" rows="4"></textarea>
+            </div>
+        </fieldset>
+
+        <!-- 1.3 Education -->
+        <fieldset>
+            <legend>1.3 Education</legend>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="educationLevel">Highest Level of Education Attained</label>
+                    <input type="text" class="form-control" id="educationLevel" name="educationLevel">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="universityName">Name of School/University</label>
+                    <input type="text" class="form-control" id="universityName" name="universityName">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="major">Major/Area of Study</label>
+                    <input type="text" class="form-control" id="major" name="major">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="graduationYear">Graduation Year</label>
+                    <input type="text" class="form-control" id="graduationYear" name="graduationYear">
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- 1.4 Employment History -->
+        <fieldset>
+            <legend>1.4 Employment History</legend>
+            <!-- First Job Entry -->
+            <div class="form-group">
+                <label for="jobTitle1">Previous Job Title</label>
+                <input type="text" class="form-control" id="jobTitle1" name="jobTitle1">
+            </div>
+            <div class="form-group">
+                <label for="companyName1">Company Name</label>
+                <input type="text" class="form-control" id="companyName1" name="companyName1">
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="employmentStartDate1">Employment Start Date</label>
+                    <input type="text" class="form-control" id="employmentStartDate1" name="employmentStartDate1">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="employmentEndDate1">Employment End Date</label>
+                    <input type="text" class="form-control" id="employmentEndDate1" name="employmentEndDate1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="jobResponsibilities1">Job Responsibilities</label>
+                <textarea class="form-control" id="jobResponsibilities1" name="jobResponsibilities1" rows="4"></textarea>
+            </div>
+        
+        </fieldset>
+
+        <!-- 1.5 Skills -->
+        <fieldset>
+            <legend>1.5 Skills</legend>
+            
+            <!-- Relevant Skills -->
+            <div class="form-group">
+                <label for="relevantSkills">Relevant Skills</label>
+                <input type="text" class="form-control" id="relevantSkills" name="relevantSkills">
+            </div>
+            
+            <!-- Certifications -->
+            <div class="form-group">
+                <label for="certifications">Certifications</label>
+                <input type="text" class="form-control" id="certifications" name="certifications">
+            </div>
+        </fieldset>
+
+        <!-- 1.6 Availability -->
+        <fieldset>
+            <legend>1.6 Availability</legend>
+            
+            <!-- Start Date -->
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="date" class="form-control" id="startDate" name="startDate">
+            </div>
+            
+            <!-- Preferred Work Schedule -->
+            <div class="form-group">
+                <label for="preferredSchedule">Preferred Work Schedule</label>
+                <input type="text" class="form-control" id="preferredSchedule" name="preferredSchedule">
+            </div>
+            
+            <!-- Willingness to Relocate -->
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="relocate" name="relocate">
+                <label class="form-check-label" for="relocate">Willingness to Relocate</label>
+            </div>
+        </fieldset>
+
+        <!-- 1.7 References -->
+        <fieldset>
+            <legend>1.7 References</legend>
+            
+            <!-- Reference 1 -->
+            <div class="form-group">
+                <label for="referenceName1">Reference Name</label>
+                <input type="text" class="form-control" id="referenceName1" name="referenceName1">
+            </div>
+            <div class="form-group">
+                <label for="referenceContact1">Reference Contact Information</label>
+                <input type="text" class="form-control" id="referenceContact1" name="referenceContact1">
+            </div>
+            <div class="form-group">
+                <label for="relationship1">Relationship to Applicant</label>
+                <input type="text" class="form-control" id="relationship1" name="relationship1">
+            </div>
+        </fieldset>
+
+        <!-- 1.8 Additional Questions -->
+        <fieldset>
+            <legend>1.8 Additional Questions</legend>
+            <div class="form-group">
+                <label for="additionalQuestion">Why do you want to work for this company?</label>
+                <textarea class="form-control" id="additionalQuestion" name="additionalQuestion" rows="4"></textarea>
+            </div>
+        </fieldset>
+
+        <!-- 1.9 Consent and Agreement -->
+        <div class="form-check mb-4">
+            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+            <label class="form-check-label" for="agreeTerms">I agree to the terms and conditions</label>
+        </div>
+        <div class="form-check mb-4">
+            <input type="checkbox" class="form-check-input" id="privacyPolicyAck" required>
+            <label class="form-check-label" for="privacyPolicyAck">I acknowledge the privacy policy</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+    </form>
+
+    <!-- View Applications as Table Button -->
+    <button type="button" class="btn btn-success mt-4" id="viewTableBtn">View Applications as Table</button>
+
+    <!-- Applications Table Section -->
+    <div id="applicationsTableSection" class="mt-4" style="display: none;">
+        <h2>Applications Table</h2>
+        <table id="applicationTable" class="table table-bordered">
+            <thead style="background-color: black; color: azure;">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>Email Address</th>
+                    <th>Cover Letter</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

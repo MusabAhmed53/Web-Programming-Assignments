@@ -1,0 +1,127 @@
+body {
+    font-family: sans-serif;
+    margin: 10;
+    padding: 10;
+    position: relative;
+  }
+
+.top-left-shape{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-style: transparent;
+}
+
+.bottom-right-shape {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  border-style: transparent;
+}
+  
+header {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color:purple;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+h2 {
+  color:grey;
+  font-size: 1.75em;
+  margin-top: 0;
+}
+
+h3{
+  color:purple;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.icon{
+  width: 20px; 
+  height: 20px; 
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+a {
+  color:black;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+#profile_picture{
+  width: 350px; 
+  height:350px; 
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+#head_table{
+      border-collapse: separate;
+      border-spacing: 50px; 
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contact li {
+  font-style: italic;
+}
+
+.profile p {
+  line-height: 1.5;
+}
+
+.languages li {
+  font-weight: bold;
+}
+
+.bullet_list{
+  list-style-type: disc;
+}
+
+.spaced-table {
+  border-spacing: 50px; 
+}
+
+.spaced-table th,
+.spaced-table td {
+  border-left: 10px solid transparent; 
+  border-right: 10px solid transparent; 
+  border-top: 1px solid transparent; 
+  border-bottom: 1px solid transparent; 
+  padding: 10px; 
+}
